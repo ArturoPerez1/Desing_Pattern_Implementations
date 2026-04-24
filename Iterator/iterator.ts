@@ -18,6 +18,7 @@ export class IteratorArray<T> implements IIterator<T>{
         this.position++;
         return element;
     }
+    
     hasNext(): boolean {
         return this.position < this.aggregate.items.length; 
     }
