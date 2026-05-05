@@ -1,34 +1,36 @@
-interface Transport {
+export interface Transport {
     deliver(): void;
 }
 
-class Truck implements Transport {
+export class Truck implements Transport {
     deliver(): void {
         console.log("Entrega por carretera");
     }
 }
 
-class Ship implements Transport {
+export class Ship implements Transport {
     deliver(): void {
         console.log("Entrega por mar");
     }
 }
 
+export abstract class Logistics {
+    protected abstract createTransport(): Transport;
 
-interface Logistic {
-    createTransport(): Transport;
+    planDelivery(): void {
+        const transport = this.createTransport();
+        transport.deliver();
+    }
 }
 
-class RoadLogistic implements Logistic {
-    createTransport(): Transport {
+export class RoadLogistics extends Logistics {
+    protected createTransport(): Transport {
         return new Truck();
     }
 }
 
-class SeaLogistic implements Logistic {
-    createTransport(): Transport {
+export class SeaLogistics extends Logistics {
+    protected createTransport(): Transport {
         return new Ship();
     }
 }
-
-
