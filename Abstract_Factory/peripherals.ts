@@ -1,51 +1,51 @@
 export interface Keyboard {
-    use(): void
+    use(): void;
 }
 
 export interface Mouse {
-    use(): void
+    use(): void;
 }
 
 export interface Headset {
-    use(): void
+    use(): void;
 }
 
-//Gamer Family
+// Gamer family
 
 export class GamerKeyboard implements Keyboard {
     use(): void {
-        console.log("Usando teclado gamer RGB")
+        console.log("Using gamer RGB keyboard");
     }
 }
 
 export class GamerMouse implements Mouse {
     use(): void {
-        console.log("Usando mouse gamer de alta precisión")
+        console.log("Using high precision gamer mouse");
     }
 }
 
 export class GamerHeadset implements Headset {
     use(): void {
-        console.log("Usando headset gamer surround")
+        console.log("Using gamer surround headset");
     }
 }
 
-// Office Family 
+// Office family
 
 export class OfficeKeyboard implements Keyboard {
     use(): void {
-        console.log("Usando teclado de oficina")
+        console.log("Using office keyboard");
     }
 }
 
 export class OfficeMouse implements Mouse {
     use(): void {
-        console.log("Usando mouse de oficina")
+        console.log("Using office mouse");
     }
 }
 
 export class OfficeHeadset implements Headset {
     use(): void {
-        console.log("Usando headset de oficina")
+        console.log("Using office headset");
     }
 }

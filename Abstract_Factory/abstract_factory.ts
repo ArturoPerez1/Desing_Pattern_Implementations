@@ -1,8 +1,14 @@
 import {
-    Keyboard, Mouse, Headset, GamerKeyboard,
-    GamerMouse, GamerHeadset, OfficeKeyboard,
-    OfficeMouse, OfficeHeadset
-} from "./peripherals";
+    GamerHeadset,
+    GamerKeyboard,
+    GamerMouse,
+    Headset,
+    Keyboard,
+    Mouse,
+    OfficeHeadset,
+    OfficeKeyboard,
+    OfficeMouse,
+} from "./peripherals.ts";
 
 export interface PeripheralFactory {
     createKeyboard(): Keyboard;
