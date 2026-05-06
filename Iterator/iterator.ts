@@ -1,4 +1,4 @@
-import { Aggregate, AggregateArray } from "./aggregate";
+import { Aggregate, AggregateArray } from "./aggregate.ts";
 
 export interface IIterator<T>{
     aggregate: Aggregate<T>

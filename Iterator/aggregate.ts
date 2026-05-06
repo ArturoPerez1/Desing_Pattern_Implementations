@@ -1,4 +1,4 @@
-import { IteratorArray, IIterator } from "./iterator";
+import { IteratorArray, IIterator } from "./iterator.ts";
 
 export interface Aggregate<T>{
     getIterator(): IIterator<T>;

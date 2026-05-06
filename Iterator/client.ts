@@ -1,6 +1,6 @@
-import { AggregateArray } from "./aggregate";
+import { AggregateArray } from "./aggregate.ts";
 
-function main(){
+function main(): void{
     let aggregateArray = new AggregateArray<string>;
     aggregateArray.addItem("Item1");
     aggregateArray.addItem("Item2");
@@ -11,3 +11,5 @@ function main(){
     console.log(iterator.hasNext());
     console.log(iterator.next());
 }
+
+main();
